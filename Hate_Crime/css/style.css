@@ -1,1 +1,100 @@
-p
+h1 {
+    text-align: left;
+    font-family: 'Noto Serif', serif;
+    line-height: 2.5596rem;
+    font-size: 2.16rem;
+    font-weight: 700;
+    font-style: italic;
+    margin-left: 60px;
+    margin-right: 50px;
+}
+
+h2 {
+    text-align: left;
+    font-family: 'Noto Serif', serif;
+    line-height: 2rem;
+    font-size: 1.3rem;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Noto Serif', serif;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+}
+
+h4 {
+    text-align: left;
+    font-family: 'Noto Serif', serif;
+    line-height: 2rem;
+    font-size: 12px;
+
+}
+
+p{
+    text-align: left;
+    font-family: 'Noto Serif', serif;
+    line-height: 2rem;
+    font-size: 1 rem; 
+    margin-left: 50px;
+    margin-right: 50px; 
+}
+img{
+    max-width: 700px;
+    height: auto;
+}
+
+.container{
+    position:relative;
+    max-width: 800px;
+    margin-top: 50px;
+}
+
+#header{
+    margin: 0px 0 10px 0;
+    padding: 5px 0 5px 0px;
+    border: 10px black;
+    position:relative;
+    width: 100%;
+    min-height:47px;
+    border-bottom: 1px solid #000000;
+}
+
+#logo{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 185px;
+  height: 26px;
+
+}
+
+#main{
+    position:relative;
+    max-width: 700px;
+}
+
+#subtitle{
+    margin: 10px 0px 10px 0px;
+}
+
+.chart{
+    margin-bottom: 20px;
+}
+
+#table{
+    margin: 00px 0 00px 0;
+    max-width: 700px;
+    max-height:auto;
+}
+
+
+div.dataTables_wrapper {
+    width: 800px;
+    margin: 0 auto;
+}

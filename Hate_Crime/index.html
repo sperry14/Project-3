@@ -1,520 +1,187 @@
+
 <!doctype html>
+
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Samantha Perry">
-    <link rel="icon" href="">
+<head>
+  <meta charset="utf-8">
 
-    <title>Exercise 3</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
-
-    <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-    <![endif]-->
-
-
-
+  <title>Hate Crimes Per County: New York</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="Samantha Perry">
+<!-- these are my stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link href="css/c3.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/r-2.2.3/sc-2.0.1/datatables.min.css"/>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
 
 </head>
+
+
+
 <body>
+<div class = "container-fluid">
+  <div class = "row">
+    <div class="col-md-12" id="header">
+        <a href="https://www.nytimes.com/">
+        <img src="img/The_New_York_Times.png" alt="The New York Times logo" id = "logo";>
+        </a>
+    </div>
+    </div>
+</div>
 
-  <table id="example" class="display" style="width:100%">
+<div class = "container" id = "main">
+    <div class = "row" style>
+      <div class="col-md-12">
+          <h1>Anti-Semitic Crime on the Rise, NYPD Reports</h1>
+      </div>
+    </div>
+    <div class = "row" id = subtitle>
+      <div class="col-md-12">
+          <h2>Figures presented by NYPD report that hate crimes in New York City have risen in 2019.</h2>
+      </div>
+    </div>
+      <img src="img/protest.jpg" class="img-fluid"  alt="A woman holds a sign in a protest.";>
+      <h4>A woman holds a sign up at a protest. Photo by T. Chick McClure on Unsplash.</h4>
+  
+      <p>As the end of 2019 approaches, the New York Police Department has reported that hate crimes have risen 
+        33 percent in New York City. The rise is attributed to a 53 percent increase in anti-Semitic incidents, 
+        a 92 percent increase in anti-White incidents, eight percent increase in crimes motivated by sexual orientation 
+        and a seven percent increase in hate crimes against black people.</p>
+<h3>2019 Hate Crimes in NYC</h3>
+<div id="piechart" class="chart"></div>
+
+<p>In the rest of New York, the rise of anti-Semitic crime has become a pattern. The FBI suggested that hot-button 
+  political topics could be attributed to the increase of crimes against others. <a href="https://www.nytimes.com/2019/11/12/us/hate-crimes-fbi-report.html">In 2018, hate crimes in America 
+  reached a 16-year high.</a></p>
+
+  <p><a href="https://www.nytimes.com/2019/12/12/nyregion/jersey-city-shooting.html">A recent shooting in nearby Jersey City</a> has again 
+  brought anti-Semitism back into public discussion. Recently, <a href="https://www.nytimes.com/2019/12/12/us/politics/trump-anti-semitism-jews.html"></a> President Trump signed an executive order</a>
+  in an attempt to combat anti-Israel protests on campus, a movement that critics call anti-Semitic.</p>
+    
+
+<h3>Rise of Anti-Semitic Hate Crimes since 2010</h3>
+<div id="chart" class="chart"></div>
+
+<p>New York tracks hate crime against 38 different genders, races, sexual orientations, nationalities and religions. You can explore the data below.</p>
+</div>
+
+<!-- table of all the data used -->
+<div class = "container">
+  <div class = "row">
+    <div class="col-md-12" id="table"> 
+      <table id="hate-table" class="display nowrap" style="width:100%">
         <thead>
-            <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011/04/25</td>
-                <td>$320,800</td>
-            </tr>
-            <tr>
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
-                <td>Tokyo</td>
-                <td>63</td>
-                <td>2011/07/25</td>
-                <td>$170,750</td>
-            </tr>
-            <tr>
-                <td>Ashton Cox</td>
-                <td>Junior Technical Author</td>
-                <td>San Francisco</td>
-                <td>66</td>
-                <td>2009/01/12</td>
-                <td>$86,000</td>
-            </tr>
-            <tr>
-                <td>Cedric Kelly</td>
-                <td>Senior Javascript Developer</td>
-                <td>Edinburgh</td>
-                <td>22</td>
-                <td>2012/03/29</td>
-                <td>$433,060</td>
-            </tr>
-            <tr>
-                <td>Airi Satou</td>
-                <td>Accountant</td>
-                <td>Tokyo</td>
-                <td>33</td>
-                <td>2008/11/28</td>
-                <td>$162,700</td>
-            </tr>
-            <tr>
-                <td>Brielle Williamson</td>
-                <td>Integration Specialist</td>
-                <td>New York</td>
-                <td>61</td>
-                <td>2012/12/02</td>
-                <td>$372,000</td>
-            </tr>
-            <tr>
-                <td>Herrod Chandler</td>
-                <td>Sales Assistant</td>
-                <td>San Francisco</td>
-                <td>59</td>
-                <td>2012/08/06</td>
-                <td>$137,500</td>
-            </tr>
-            <tr>
-                <td>Rhona Davidson</td>
-                <td>Integration Specialist</td>
-                <td>Tokyo</td>
-                <td>55</td>
-                <td>2010/10/14</td>
-                <td>$327,900</td>
-            </tr>
-            <tr>
-                <td>Colleen Hurst</td>
-                <td>Javascript Developer</td>
-                <td>San Francisco</td>
-                <td>39</td>
-                <td>2009/09/15</td>
-                <td>$205,500</td>
-            </tr>
-            <tr>
-                <td>Sonya Frost</td>
-                <td>Software Engineer</td>
-                <td>Edinburgh</td>
-                <td>23</td>
-                <td>2008/12/13</td>
-                <td>$103,600</td>
-            </tr>
-            <tr>
-                <td>Jena Gaines</td>
-                <td>Office Manager</td>
-                <td>London</td>
-                <td>30</td>
-                <td>2008/12/19</td>
-                <td>$90,560</td>
-            </tr>
-            <tr>
-                <td>Quinn Flynn</td>
-                <td>Support Lead</td>
-                <td>Edinburgh</td>
-                <td>22</td>
-                <td>2013/03/03</td>
-                <td>$342,000</td>
-            </tr>
-            <tr>
-                <td>Charde Marshall</td>
-                <td>Regional Director</td>
-                <td>San Francisco</td>
-                <td>36</td>
-                <td>2008/10/16</td>
-                <td>$470,600</td>
-            </tr>
-            <tr>
-                <td>Haley Kennedy</td>
-                <td>Senior Marketing Designer</td>
-                <td>London</td>
-                <td>43</td>
-                <td>2012/12/18</td>
-                <td>$313,500</td>
-            </tr>
-            <tr>
-                <td>Tatyana Fitzpatrick</td>
-                <td>Regional Director</td>
-                <td>London</td>
-                <td>19</td>
-                <td>2010/03/17</td>
-                <td>$385,750</td>
-            </tr>
-            <tr>
-                <td>Michael Silva</td>
-                <td>Marketing Designer</td>
-                <td>London</td>
-                <td>66</td>
-                <td>2012/11/27</td>
-                <td>$198,500</td>
-            </tr>
-            <tr>
-                <td>Paul Byrd</td>
-                <td>Chief Financial Officer (CFO)</td>
-                <td>New York</td>
-                <td>64</td>
-                <td>2010/06/09</td>
-                <td>$725,000</td>
-            </tr>
-            <tr>
-                <td>Gloria Little</td>
-                <td>Systems Administrator</td>
-                <td>New York</td>
-                <td>59</td>
-                <td>2009/04/10</td>
-                <td>$237,500</td>
-            </tr>
-            <tr>
-                <td>Bradley Greer</td>
-                <td>Software Engineer</td>
-                <td>London</td>
-                <td>41</td>
-                <td>2012/10/13</td>
-                <td>$132,000</td>
-            </tr>
-            <tr>
-                <td>Dai Rios</td>
-                <td>Personnel Lead</td>
-                <td>Edinburgh</td>
-                <td>35</td>
-                <td>2012/09/26</td>
-                <td>$217,500</td>
-            </tr>
-            <tr>
-                <td>Jenette Caldwell</td>
-                <td>Development Lead</td>
-                <td>New York</td>
-                <td>30</td>
-                <td>2011/09/03</td>
-                <td>$345,000</td>
-            </tr>
-            <tr>
-                <td>Yuri Berry</td>
-                <td>Chief Marketing Officer (CMO)</td>
-                <td>New York</td>
-                <td>40</td>
-                <td>2009/06/25</td>
-                <td>$675,000</td>
-            </tr>
-            <tr>
-                <td>Caesar Vance</td>
-                <td>Pre-Sales Support</td>
-                <td>New York</td>
-                <td>21</td>
-                <td>2011/12/12</td>
-                <td>$106,450</td>
-            </tr>
-            <tr>
-                <td>Doris Wilder</td>
-                <td>Sales Assistant</td>
-                <td>Sidney</td>
-                <td>23</td>
-                <td>2010/09/20</td>
-                <td>$85,600</td>
-            </tr>
-            <tr>
-                <td>Angelica Ramos</td>
-                <td>Chief Executive Officer (CEO)</td>
-                <td>London</td>
-                <td>47</td>
-                <td>2009/10/09</td>
-                <td>$1,200,000</td>
-            </tr>
-            <tr>
-                <td>Gavin Joyce</td>
-                <td>Developer</td>
-                <td>Edinburgh</td>
-                <td>42</td>
-                <td>2010/12/22</td>
-                <td>$92,575</td>
-            </tr>
-            <tr>
-                <td>Jennifer Chang</td>
-                <td>Regional Director</td>
-                <td>Singapore</td>
-                <td>28</td>
-                <td>2010/11/14</td>
-                <td>$357,650</td>
-            </tr>
-            <tr>
-                <td>Brenden Wagner</td>
-                <td>Software Engineer</td>
-                <td>San Francisco</td>
-                <td>28</td>
-                <td>2011/06/07</td>
-                <td>$206,850</td>
-            </tr>
-            <tr>
-                <td>Fiona Green</td>
-                <td>Chief Operating Officer (COO)</td>
-                <td>San Francisco</td>
-                <td>48</td>
-                <td>2010/03/11</td>
-                <td>$850,000</td>
-            </tr>
-            <tr>
-                <td>Shou Itou</td>
-                <td>Regional Marketing</td>
-                <td>Tokyo</td>
-                <td>20</td>
-                <td>2011/08/14</td>
-                <td>$163,000</td>
-            </tr>
-            <tr>
-                <td>Michelle House</td>
-                <td>Integration Specialist</td>
-                <td>Sidney</td>
-                <td>37</td>
-                <td>2011/06/02</td>
-                <td>$95,400</td>
-            </tr>
-            <tr>
-                <td>Suki Burks</td>
-                <td>Developer</td>
-                <td>London</td>
-                <td>53</td>
-                <td>2009/10/22</td>
-                <td>$114,500</td>
-            </tr>
-            <tr>
-                <td>Prescott Bartlett</td>
-                <td>Technical Author</td>
-                <td>London</td>
-                <td>27</td>
-                <td>2011/05/07</td>
-                <td>$145,000</td>
-            </tr>
-            <tr>
-                <td>Gavin Cortez</td>
-                <td>Team Leader</td>
-                <td>San Francisco</td>
-                <td>22</td>
-                <td>2008/10/26</td>
-                <td>$235,500</td>
-            </tr>
-            <tr>
-                <td>Martena Mccray</td>
-                <td>Post-Sales support</td>
-                <td>Edinburgh</td>
-                <td>46</td>
-                <td>2011/03/09</td>
-                <td>$324,050</td>
-            </tr>
-            <tr>
-                <td>Unity Butler</td>
-                <td>Marketing Designer</td>
-                <td>San Francisco</td>
-                <td>47</td>
-                <td>2009/12/09</td>
-                <td>$85,675</td>
-            </tr>
-            <tr>
-                <td>Howard Hatfield</td>
-                <td>Office Manager</td>
-                <td>San Francisco</td>
-                <td>51</td>
-                <td>2008/12/16</td>
-                <td>$164,500</td>
-            </tr>
-            <tr>
-                <td>Hope Fuentes</td>
-                <td>Secretary</td>
-                <td>San Francisco</td>
-                <td>41</td>
-                <td>2010/02/12</td>
-                <td>$109,850</td>
-            </tr>
-            <tr>
-                <td>Vivian Harrell</td>
-                <td>Financial Controller</td>
-                <td>San Francisco</td>
-                <td>62</td>
-                <td>2009/02/14</td>
-                <td>$452,500</td>
-            </tr>
-            <tr>
-                <td>Timothy Mooney</td>
-                <td>Office Manager</td>
-                <td>London</td>
-                <td>37</td>
-                <td>2008/12/11</td>
-                <td>$136,200</td>
-            </tr>
-            <tr>
-                <td>Jackson Bradshaw</td>
-                <td>Director</td>
-                <td>New York</td>
-                <td>65</td>
-                <td>2008/09/26</td>
-                <td>$645,750</td>
-            </tr>
-            <tr>
-                <td>Olivia Liang</td>
-                <td>Support Engineer</td>
-                <td>Singapore</td>
-                <td>64</td>
-                <td>2011/02/03</td>
-                <td>$234,500</td>
-            </tr>
-            <tr>
-                <td>Bruno Nash</td>
-                <td>Software Engineer</td>
-                <td>London</td>
-                <td>38</td>
-                <td>2011/05/03</td>
-                <td>$163,500</td>
-            </tr>
-            <tr>
-                <td>Sakura Yamamoto</td>
-                <td>Support Engineer</td>
-                <td>Tokyo</td>
-                <td>37</td>
-                <td>2009/08/19</td>
-                <td>$139,575</td>
-            </tr>
-            <tr>
-                <td>Thor Walton</td>
-                <td>Developer</td>
-                <td>New York</td>
-                <td>61</td>
-                <td>2013/08/11</td>
-                <td>$98,540</td>
-            </tr>
-            <tr>
-                <td>Finn Camacho</td>
-                <td>Support Engineer</td>
-                <td>San Francisco</td>
-                <td>47</td>
-                <td>2009/07/07</td>
-                <td>$87,500</td>
-            </tr>
-            <tr>
-                <td>Serge Baldwin</td>
-                <td>Data Coordinator</td>
-                <td>Singapore</td>
-                <td>64</td>
-                <td>2012/04/09</td>
-                <td>$138,575</td>
-            </tr>
-            <tr>
-                <td>Zenaida Frank</td>
-                <td>Software Engineer</td>
-                <td>New York</td>
-                <td>63</td>
-                <td>2010/01/04</td>
-                <td>$125,250</td>
-            </tr>
-            <tr>
-                <td>Zorita Serrano</td>
-                <td>Software Engineer</td>
-                <td>San Francisco</td>
-                <td>56</td>
-                <td>2012/06/01</td>
-                <td>$115,000</td>
-            </tr>
-            <tr>
-                <td>Jennifer Acosta</td>
-                <td>Junior Javascript Developer</td>
-                <td>Edinburgh</td>
-                <td>43</td>
-                <td>2013/02/01</td>
-                <td>$75,650</td>
-            </tr>
-            <tr>
-                <td>Cara Stevens</td>
-                <td>Sales Assistant</td>
-                <td>New York</td>
-                <td>46</td>
-                <td>2011/12/06</td>
-                <td>$145,600</td>
-            </tr>
-            <tr>
-                <td>Hermione Butler</td>
-                <td>Regional Director</td>
-                <td>London</td>
-                <td>47</td>
-                <td>2011/03/21</td>
-                <td>$356,250</td>
-            </tr>
-            <tr>
-                <td>Lael Greer</td>
-                <td>Systems Administrator</td>
-                <td>London</td>
-                <td>21</td>
-                <td>2009/02/27</td>
-                <td>$103,500</td>
-            </tr>
-            <tr>
-                <td>Jonas Alexander</td>
-                <td>Developer</td>
-                <td>San Francisco</td>
-                <td>30</td>
-                <td>2010/07/14</td>
-                <td>$86,500</td>
-            </tr>
-            <tr>
-                <td>Shad Decker</td>
-                <td>Regional Director</td>
-                <td>Edinburgh</td>
-                <td>51</td>
-                <td>2008/11/13</td>
-                <td>$183,000</td>
-            </tr>
-            <tr>
-                <td>Michael Bruce</td>
-                <td>Javascript Developer</td>
-                <td>Singapore</td>
-                <td>29</td>
-                <td>2011/06/27</td>
-                <td>$183,000</td>
-            </tr>
-            <tr>
-                <td>Donna Snider</td>
-                <td>Customer Support</td>
-                <td>New York</td>
-                <td>27</td>
-                <td>2011/01/25</td>
-                <td>$112,000</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
-            </tr>
-        </tfoot>
-    </table>
+              <tr>
+                  <th>County</th>
+                <th>Year</th>
+                <th>Anti-Male</th>
+                <th>Anti-Female</th>
+                <th>Anti-Transgender</th>
+                <th>Anti-Gender Identity Expression</th>
+                <th>Anti-Age</th>
+                <th>Anti-White</th>
+                <th>Anti-Black</th>
+                <th>Anti-American Indian/Alaskan Native</th>
+                <th>Anti-Asian</th>
+                <th>Anti-Native Hawaiian/Pacific Islander</th>
+                <th>Anti-Multi-Racial Groups</th>
+                <th>Anti-Other Race</th>
+                <th>Anti-Jewish</th>
+                <th>Anti-Catholic</th>
+                <th>Anti-Protestant</th>
+                <th>Anti-Islamic (Muslim)</th>
+                <th>Anti-Multi-Religious Groups</th>
+                <th>Anti-Atheism/Agnosticism</th>
+                <th>Anti-Religious Practice Generally</th>
+                <th>Anti-Other Religion</th>
+                <th>Anti-Buddhist</th>
+                <th>Anti-Eastern Orthodox</th>
+                <th>Anti-Hindu</th>
+                <th>Anti-Jehovahs Witness</th>
+                <th>Anti-Mormon</th>
+                <th>Anti-Other Christian</th>
+                <th>Anti-Sikh</th>
+                <th>Anti-Hispanic</th>
+                <th>Anti-Arab</th>
+                <th>Anti-Other Ethnicity/National Origin</th>
+                <th>Anti-Non-Hispanic*</th>
+                <th>Anti-Gay Male</th>
+                <th>Anti-Gay Female</th>
+                <th>Anti-Gay (Male and Female)</th>
+                <th>Anti-Heterosexual</th>
+                <th>Anti-Bisexual</th>
+                <th>Anti-Physical Disability</th>
+                <th>Anti-Mental Disability</th>
+                <th>Total Incidents</th>
+                <th>Total Victims</th>
+                <th>Total Offenders</th>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
-  <!-- Load c3.css -->
-  <link href="/path/to/c3.css" rel="stylesheet">
+              </tr>
+          </thead>
+          <tfoot>
+              <tr>
+                  <th>County</th>
+                <th>Year</th>
+                <th>Anti-Male</th>
+                <th>Anti-Female</th>
+                <th>Anti-Transgender</th>
+                <th>Anti-Gender Identity Expression</th>
+                <th>Anti-Age</th>
+                <th>Anti-White</th>
+                <th>Anti-Black</th>
+                <th>Anti-American Indian/Alaskan Native</th>
+                <th>Anti-Asian</th>
+                <th>Anti-Native Hawaiian/Pacific Islander</th>
+                <th>Anti-Multi-Racial Groups</th>
+                <th>Anti-Other Race</th>
+                <th>Anti-Jewish</th>
+                <th>Anti-Catholic</th>
+                <th>Anti-Protestant</th>
+                <th>Anti-Islamic (Muslim)</th>
+                <th>Anti-Multi-Religious Groups</th>
+                <th>Anti-Atheism/Agnosticism</th>
+                <th>Anti-Religious Practice Generally</th>
+                <th>Anti-Other Religion</th>
+                <th>Anti-Buddhist</th>
+                <th>Anti-Eastern Orthodox</th>
+                <th>Anti-Hindu</th>
+                <th>Anti-Jehovahs Witness</th>
+                <th>Anti-Mormon</th>
+                <th>Anti-Other Christian</th>
+                <th>Anti-Sikh</th>
+                <th>Anti-Hispanic</th>
+                <th>Anti-Arab</th>
+                <th>Anti-Other Ethnicity/National Origin</th>
+                <th>Anti-Non-Hispanic*</th>
+                <th>Anti-Gay Male</th>
+                <th>Anti-Gay Female</th>
+                <th>Anti-Gay (Male and Female)</th>
+                <th>Anti-Heterosexual</th>
+                <th>Anti-Bisexual</th>
+                <th>Anti-Physical Disability</th>
+                <th>Anti-Mental Disability</th>
+                <th>Total Incidents</th>
+                <th>Total Victims</th>
+                <th>Total Offenders</th>
 
-  <!-- Load d3.js and c3.js -->
-  <script src="/path/to/d3.v5.min.js" charset="utf-8"></script>
-  <script src="/path/to/c3.min.js"></script>
+              </tr>
+          </tfoot>
+      </table>
+    </div>
+  </div>
+  </div>
 
-  <script src="scripts.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/r-2.2.3/sc-2.0.1/datatables.min.js"></script>
+
+
+
+  <!-- D3, C3 stuff -->
+  <script src="js/d3-5.8.2.min.js"></script>
+  <script src="js/c3.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
